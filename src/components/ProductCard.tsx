@@ -33,7 +33,7 @@ export default function ProductCard({ product }: ProductCardProps) {
     const timer = setTimeout(() => {
       try {
         const favorites: string[] = JSON.parse(
-          localStorage.getItem("campuscart-favorites") || "[]"
+          localStorage.getItem("picksy-favorites") || "[]"
         );
         setIsFavorite(favorites.includes(productId));
       } catch {
@@ -50,7 +50,7 @@ export default function ProductCard({ product }: ProductCardProps) {
 
     try {
       const favorites: string[] = JSON.parse(
-        localStorage.getItem("campuscart-favorites") || "[]"
+        localStorage.getItem("picksy-favorites") || "[]"
       );
 
       let updatedFavorites: string[];
@@ -64,11 +64,11 @@ export default function ProductCard({ product }: ProductCardProps) {
       }
 
       localStorage.setItem(
-        "campuscart-favorites",
+        "picksy-favorites",
         JSON.stringify(updatedFavorites)
       );
 
-      window.dispatchEvent(new Event("campuscart-favorites-changed"));
+      window.dispatchEvent(new Event("picksy-favorites-changed"));
     } catch {
       // Ignore
     }
@@ -109,7 +109,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               <span className="text-6xl group-hover:scale-110 transition duration-300 drop-shadow-[0_0_12px_rgba(168,85,247,0.3)] select-none">
                 {product.emoji || "📦"}
               </span>
-              <span className="text-[11px] text-[#71717A] mt-2">CampusCart</span>
+              <span className="text-[11px] text-[#71717A] mt-2">Picksy</span>
             </div>
           )}
 

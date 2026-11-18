@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CampusCart – Student Second-Hand Marketplace",
+  title: "Picksy – Student Second-Hand Marketplace",
   description: "Buy, sell, and exchange second-hand products, textbooks, and gear for college students.",
 };
 

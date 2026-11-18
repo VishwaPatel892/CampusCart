@@ -105,7 +105,7 @@ function ProductDetailsContent() {
     const timer = setTimeout(() => {
       try {
         const favs: string[] = JSON.parse(
-          localStorage.getItem("campuscart-favorites") || "[]"
+          localStorage.getItem("Picksy-favorites") || "[]"
         );
         setIsFavorite(favs.includes(id));
       } catch {
@@ -120,7 +120,7 @@ function ProductDetailsContent() {
     if (!id) return;
     try {
       const favorites: string[] = JSON.parse(
-        localStorage.getItem("campuscart-favorites") || "[]"
+        localStorage.getItem("Picksy-favorites") || "[]"
       );
 
       let updated: string[];
@@ -132,8 +132,8 @@ function ProductDetailsContent() {
         setIsFavorite(true);
       }
 
-      localStorage.setItem("campuscart-favorites", JSON.stringify(updated));
-      window.dispatchEvent(new Event("campuscart-favorites-changed"));
+      localStorage.setItem("Picksy-favorites", JSON.stringify(updated));
+      window.dispatchEvent(new Event("Picksy-favorites-changed"));
     } catch {
       // ignore
     }

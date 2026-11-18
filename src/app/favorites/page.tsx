@@ -16,7 +16,7 @@ export default function FavoritesPage() {
   const loadFavorites = useCallback(async () => {
     try {
       const savedFavorites: string[] = JSON.parse(
-        localStorage.getItem("campuscart-favorites") || "[]"
+        localStorage.getItem("Picksy-favorites") || "[]"
       );
 
       if (savedFavorites.length === 0) {
@@ -57,18 +57,18 @@ export default function FavoritesPage() {
       loadFavorites();
     }
 
-    window.addEventListener("campuscart-favorites-changed", handleFavoritesChanged);
+    window.addEventListener("Picksy-favorites-changed", handleFavoritesChanged);
     return () => {
       clearTimeout(timer);
-      window.removeEventListener("campuscart-favorites-changed", handleFavoritesChanged);
+      window.removeEventListener("Picksy-favorites-changed", handleFavoritesChanged);
     };
   }, [loadFavorites]);
 
   function clearAllFavorites() {
     if (confirm("Are you sure you want to clear all your saved favorites?")) {
-      localStorage.removeItem("campuscart-favorites");
+      localStorage.removeItem("Picksy-favorites");
       setProducts([]);
-      window.dispatchEvent(new Event("campuscart-favorites-changed"));
+      window.dispatchEvent(new Event("Picksy-favorites-changed"));
     }
   }
 

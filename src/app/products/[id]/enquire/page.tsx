@@ -19,13 +19,13 @@ function EnquireProductContent() {
   // Initialize with local storage if available
   const [buyerName, setBuyerName] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("campuscart-buyer-name") || "";
+      return localStorage.getItem("Picksy-buyer-name") || "";
     }
     return "";
   });
   const [buyerPhone, setBuyerPhone] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("campuscart-buyer-phone") || "";
+      return localStorage.getItem("Picksy-buyer-phone") || "";
     }
     return "";
   });
@@ -104,8 +104,8 @@ function EnquireProductContent() {
 
       // Persist contact details for future ease of use
       try {
-        localStorage.setItem("campuscart-buyer-name", buyerName.trim());
-        localStorage.setItem("campuscart-buyer-phone", cleanPhone);
+        localStorage.setItem("Picksy-buyer-name", buyerName.trim());
+        localStorage.setItem("Picksy-buyer-phone", cleanPhone);
       } catch {}
 
       setSubmitted(true);

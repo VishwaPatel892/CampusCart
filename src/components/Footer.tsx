@@ -103,7 +103,7 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#71717A]">
-          <p>© 2026 CampusCart. Built for college students.</p>
+          <p>© 2026 Picksy. Built for college students.</p>
           <p className="text-[11px]">Buy Smart. Sell Easy. Save More on Campus.</p>
         </div>
       </div>

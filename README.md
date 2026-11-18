@@ -1,4 +1,4 @@
-# CampusCart 🎓
+# Picksy 🎓
 
 A student-focused second-hand marketplace web app built with Next.js, React, Tailwind CSS, and MongoDB. Students can easily discover affordable textbooks, electronics, dorm furniture, and study equipment, or sell and give away items to peers on campus.
 
@@ -26,14 +26,14 @@ A student-focused second-hand marketplace web app built with Next.js, React, Tai
 ### Prerequisites
 
 - Node.js 18 or higher installed
-- MongoDB running locally (`mongodb://127.0.0.1:27017/campuscart`) or a MongoDB Atlas connection string
+- MongoDB running locally (`mongodb://127.0.0.1:27017/Picksy`) or a MongoDB Atlas connection string
 
 ### Installation
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/VishwaPatel892/CampusCart.git
-cd CampusCart
+git clone https://github.com/VishwaPatel892/Picksy.git
+cd Picksy
 ```
 
 2. Install dependencies:
@@ -44,7 +44,7 @@ npm install
 3. Set up environment variables:
 Create a `.env.local` file in the root directory:
 ```env
-MONGODB_URI=mongodb://127.0.0.1:27017/campuscart
+MONGODB_URI=mongodb://127.0.0.1:27017/Picksy
 ```
 
 4. Populate sample campus listings (Optional):

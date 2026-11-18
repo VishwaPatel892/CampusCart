@@ -28,13 +28,13 @@ export default function EnquiriesPage() {
   const [activeTab, setActiveTab] = useState<"received" | "sent" | "all">("all");
   const [sellerFilter, setSellerFilter] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("campuscart-seller-name") || "";
+      return localStorage.getItem("Picksy-seller-name") || "";
     }
     return "";
   });
   const [buyerFilter, setBuyerFilter] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("campuscart-buyer-phone") || "";
+      return localStorage.getItem("Picksy-buyer-phone") || "";
     }
     return "";
   });
@@ -108,7 +108,7 @@ export default function EnquiriesPage() {
   function handleSellerNameSave(name: string) {
     setSellerFilter(name);
     try {
-      localStorage.setItem("campuscart-seller-name", name);
+      localStorage.setItem("Picksy-seller-name", name);
     } catch {}
   }
 
@@ -198,7 +198,7 @@ export default function EnquiriesPage() {
                     onChange={(e) => {
                       setBuyerFilter(e.target.value);
                       try {
-                        localStorage.setItem("campuscart-buyer-phone", e.target.value);
+                        localStorage.setItem("Picksy-buyer-phone", e.target.value);
                       } catch {}
                     }}
                     placeholder="Your phone number"

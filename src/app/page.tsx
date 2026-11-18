@@ -382,7 +382,7 @@ export default function Home() {
           </Suspense>
         </section>
 
-        {/* How CampusCart Works */}
+        {/* How Picksy Works */}
         <section className="bg-[#100D1B] border-y border-[#302641] py-20 px-5 sm:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-14">
@@ -390,7 +390,7 @@ export default function Home() {
                 Simple & Frictionless
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#F8FAFC] mt-2">
-                How CampusCart Works
+                How Picksy Works
               </h2>
               <p className="text-sm sm:text-base text-[#A1A1AA] mt-3">
                 No complex shipping, no commission cuts. Straightforward student-to-student transactions.
@@ -428,14 +428,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Why Students Choose CampusCart */}
+        {/* Why Students Choose Picksy */}
         <section className="max-w-7xl mx-auto px-5 sm:px-8 py-20">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="text-xs font-bold uppercase tracking-wider text-[#A855F7]">
               Built For Campus Life
             </span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#F8FAFC] mt-2">
-              Why Students Choose CampusCart
+              Why Students Choose Picksy
             </h2>
           </div>
 

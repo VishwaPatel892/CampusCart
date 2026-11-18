@@ -25,7 +25,7 @@ export default function NotificationsPage() {
   const [error, setError] = useState("");
   const [userHandle, setUserHandle] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("campuscart-seller-name") || "";
+      return localStorage.getItem("Picksy-seller-name") || "";
     }
     return "";
   });
@@ -172,7 +172,7 @@ export default function NotificationsPage() {
                 onChange={(e) => {
                   setUserHandle(e.target.value);
                   try {
-                    localStorage.setItem("campuscart-seller-name", e.target.value);
+                    localStorage.setItem("Picksy-seller-name", e.target.value);
                   } catch {}
                 }}
                 placeholder="Enter handle or phone"
@@ -183,7 +183,7 @@ export default function NotificationsPage() {
                   onClick={() => {
                     setUserHandle("");
                     try {
-                      localStorage.removeItem("campuscart-seller-name");
+                      localStorage.removeItem("Picksy-seller-name");
                     } catch {}
                   }}
                   className="text-xs text-[#A1A1AA] hover:text-[#F8FAFC] transition"

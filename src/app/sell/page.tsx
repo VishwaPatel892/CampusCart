@@ -24,7 +24,7 @@ export default function SellPage() {
   const [location, setLocation] = useState("Campus Main Library Quad");
   const [seller, setSeller] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("campuscart-seller-name") || "";
+      return localStorage.getItem("Picksy-seller-name") || "";
     }
     return "";
   });
@@ -253,7 +253,7 @@ export default function SellPage() {
 
       // Save seller name locally for dashboard convenience
       try {
-        localStorage.setItem("campuscart-seller-name", seller.trim());
+        localStorage.setItem("Picksy-seller-name", seller.trim());
       } catch {}
 
       setCreatedProductId(data.product?._id || null);
@@ -599,7 +599,7 @@ export default function SellPage() {
 
               {/* Status Note */}
               <div className="bg-[#100D1B] border border-[#302641] rounded-2xl p-4 text-xs text-[#A1A1AA] leading-relaxed">
-                <strong className="text-[#F8FAFC]">CampusCart Policy:</strong> Your product will start as{" "}
+                <strong className="text-[#F8FAFC]">Picksy Policy:</strong> Your product will start as{" "}
                 <span className="font-semibold text-emerald-400">Available</span>. You can mark it as Reserved or Sold from your Seller Dashboard at any time.
               </div>
 

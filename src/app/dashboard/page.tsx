@@ -25,13 +25,13 @@ import {
 export default function DashboardPage() {
   const [sellerName, setSellerName] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("campuscart-seller-name") || "";
+      return localStorage.getItem("Picksy-seller-name") || "";
     }
     return "";
   });
   const [nameInput, setNameInput] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("campuscart-seller-name") || "";
+      return localStorage.getItem("Picksy-seller-name") || "";
     }
     return "";
   });
@@ -95,7 +95,7 @@ export default function DashboardPage() {
       setError("Please enter your seller name.");
       return;
     }
-    localStorage.setItem("campuscart-seller-name", clean);
+    localStorage.setItem("Picksy-seller-name", clean);
     setSellerName(clean);
   }
 

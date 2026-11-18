@@ -31,7 +31,7 @@ export default function Navbar() {
       try {
         const sellerName =
           typeof window !== "undefined"
-            ? localStorage.getItem("campuscart-seller-name") || ""
+            ? localStorage.getItem("picksy-seller-name") || ""
             : "";
 
         if (isMounted) {
@@ -107,11 +107,10 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-xs xl:text-sm font-medium transition flex items-center gap-1.5 px-2.5 xl:px-3 py-1.5 rounded-lg shrink-0 ${
-                    isActive
+                  className={`text-xs xl:text-sm font-medium transition flex items-center gap-1.5 px-2.5 xl:px-3 py-1.5 rounded-lg shrink-0 ${isActive
                       ? "text-[#A855F7] bg-[#171326] border border-[#302641] font-semibold shadow-[0_0_12px_-3px_rgba(168,85,247,0.25)]"
                       : "text-[#A1A1AA] hover:text-[#F8FAFC] hover:bg-[#100D1B]"
-                  }`}
+                    }`}
                 >
                   <Icon size={14} className="shrink-0" />
                   <span>{link.label}</span>
@@ -203,11 +202,10 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition ${
-                  isActive
+                className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition ${isActive
                     ? "bg-[#171326] text-[#A855F7] font-semibold border border-[#302641]"
                     : "text-[#A1A1AA] hover:text-[#F8FAFC] hover:bg-[#171326]"
-                }`}
+                  }`}
               >
                 <Icon size={18} className="text-[#A855F7]" />
                 <span>{link.mobileLabel}</span>
