@@ -89,7 +89,7 @@ export default function Navbar() {
             </div>
             <div className="flex items-center">
               <span className="text-lg sm:text-xl font-bold tracking-tight text-[#F8FAFC]">
-                Campus<span className="text-[#A855F7] drop-shadow-[0_0_12px_rgba(168,85,247,0.5)]">Cart</span>
+                Pick<span className="text-[#A855F7] drop-shadow-[0_0_12px_rgba(168,85,247,0.5)]">sy</span>
               </span>
               {/* Only show badge on wide screens to save horizontal space on laptops */}
               <span className="hidden xl:inline-block text-[10px] bg-[#1E1930] text-[#C084FC] px-2 py-0.5 rounded-full font-medium ml-2 border border-[#302641]">
